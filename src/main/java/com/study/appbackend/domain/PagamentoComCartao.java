@@ -1,6 +1,7 @@
 package com.study.appbackend.domain;
 
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -8,6 +9,7 @@ import javax.persistence.Entity;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @JsonTypeName("pagamentoComCartao")
 @Entity
 public class PagamentoComCartao extends Pagamento {

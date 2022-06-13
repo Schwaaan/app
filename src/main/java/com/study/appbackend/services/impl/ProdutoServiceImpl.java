@@ -22,7 +22,7 @@ public class ProdutoServiceImpl implements ProdutoInterface {
 
     @Override
     public Produto findById(Integer id) {
-        return AssertUtils.found(produtoRepository.findById(id), "Not Found");
+        return AssertUtils.found(produtoRepository.findById(id), "Produto Não encontrado");
     }
 
     @Override

@@ -1,12 +1,10 @@
 package com.study.appbackend.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
@@ -24,5 +22,14 @@ public class Endereco implements Serializable {
     private String complemento;
     private String bairro;
     private String cep;
+
+    @ManyToOne
+    @JoinColumn(name = "cidade_id")
+    private Cidade cidade;
+
+    @JsonBackReference
+    @ManyToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
 
 }

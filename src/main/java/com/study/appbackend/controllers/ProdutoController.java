@@ -14,7 +14,6 @@ public class ProdutoController {
     @Autowired
     private ProdutoInterface produtoInterface;
 
-
     @PostMapping
     public Produto createProduto(@RequestBody Produto produto) {
         return produtoInterface.createProduto(produto);
